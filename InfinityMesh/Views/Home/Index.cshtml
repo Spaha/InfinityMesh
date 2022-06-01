@@ -1,0 +1,189 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Data;
+@model DataTable
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>InfinityMesh</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="text-center" style="padding-top: 50px;">
+    <h4>Presidential election results</h4>
+    <div class="row">
+        <div class="col">
+            <section class="mt-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 mb-4">
+                            <h5 class="text-center">@ViewData["State1"]</h5>
+                            <form asp-controller="Home" asp-action="Index" method="post" enctype="multipart/form-data">
+                                <input type="file" name="postedFile" />
+                                <input type="submit" value="Import" />
+                            </form>
+                        </div>                
+                    <div class="col-xl-12 mb-3">
+                            <div class="table-responsive table-bordered">
+                                <table class="table table-bordered table2excel mb-3">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Votes</th>
+                                            <th>Percentage</th>
+                                            <th>Error</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="noExl">
+                                            <td>@ViewData["T1Name1"]</td>
+                                            <td>@ViewData["T1Votes1"]</td>
+                                            <td>would</td>
+                                            <td>not</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T1Name2"]</td>
+                                            <td>@ViewData["T1Votes2"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T1Name3"]</td>
+                                            <td>@ViewData["T1Votes3"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T1Name4"]</td>
+                                            <td>@ViewData["T1Votes4"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T1Name5"]</td>
+                                            <td>@ViewData["T1Votes5"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 mb-4">
+                            <h5 class="text-center">@ViewData["State2"]</h5>
+                        </div>                
+                        <div class="col-xl-12 mb-3">
+                            <div class="table-responsive table-bordered">
+                                <table class="table table-bordered table2excel mb-3">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Votes</th>
+                                            <th>Percentage</th>
+                                            <th>Error</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="noExl">
+                                            <td>@ViewData["T2Name1"]</td>
+                                            <td>@ViewData["T2Votes1"]</td>
+                                            <td>would</td>
+                                            <td>not</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T2Name2"]</td>
+                                            <td>@ViewData["T2Votes2"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T2Name3"]</td>
+                                            <td>@ViewData["T2Votes3"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T2Name4"]</td>
+                                            <td>@ViewData["T2Votes4"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T2Name5"]</td>
+                                            <td>@ViewData["T2Votes5"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 mb-4">
+                            <h5 class="text-center">@ViewData["State3"]</h5>
+                        </div>                
+                        <div class="col-xl-12 mb-3">
+                            <div class="table-responsive table-bordered">
+                                <table class="table table-bordered table2excel mb-3">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Votes</th>
+                                            <th>Percentage</th>
+                                            <th>Error</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="noExl">
+                                            <td>@ViewData["T3Name1"]</td>
+                                            <td>@ViewData["T3Votes1"]</td>
+                                            <td>would</td>
+                                            <td>not</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T3Name2"]</td>
+                                            <td>@ViewData["T3Votes2"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T3Name3"]</td>
+                                            <td>@ViewData["T3Votes3"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T3Name4"]</td>
+                                            <td>@ViewData["T3Votes4"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ViewData["T3Name5"]</td>
+                                            <td>@ViewData["T3Votes5"]</td>
+                                            <td>Cell 3</td>
+                                            <td>Cell 4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="btn-group" role="group"></div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/HTML-Table-to-Excel-V2.js"></script>
+</body>
+
+</html>
